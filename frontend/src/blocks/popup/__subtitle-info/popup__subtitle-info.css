@@ -1,0 +1,9 @@
+.popup__subtitle-info {
+  max-width: 358px;
+  text-align: center;
+  margin: 0 auto 60px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.21;
+  color: #000000;
+}

@@ -1,0 +1,6 @@
+.gallary__info {
+  margin: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

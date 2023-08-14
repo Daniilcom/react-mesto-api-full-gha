@@ -1,0 +1,18 @@
+.gallary__trash {
+  width: 18px;
+  height: 19px;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: url(../../../images/icons/trash_button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+
+.gallary__trash:hover {
+  opacity: 0.6;
+}

@@ -1,0 +1,5 @@
+.popup_open-loading {
+  visibility: visible;
+  opacity: 1;
+  background: rgb(0, 0, 0);
+}

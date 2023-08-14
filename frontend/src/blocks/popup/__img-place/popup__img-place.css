@@ -1,0 +1,15 @@
+.popup__img-place {
+  margin: 90px auto 68px;
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-template-rows: repeat(2, minmax(min-content, max-content));
+  gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .popup__img-place {
+    margin: 136px auto 133px;
+  }
+}

@@ -1,0 +1,7 @@
+.header__auth-link_signout {
+  color: #a9a9a9;
+}
+
+.header__auth-link_signout:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,5 @@
+.gallary__like_active {
+  background: url(../../../../images/icons/like_active_button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
