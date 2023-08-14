@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
@@ -7,10 +8,10 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const NotFoundError = require('./utils/errors/not-found-err');
 
-const { PORT, DB_URL } = require('./utils/constants');
+const { PORT, DB_URL } = process.env;
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: ['https://daniilcom.nomoreparties.co'] }));
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const auth = require('./middlewares/auth');
@@ -27,6 +28,12 @@ app.use(express.json());
 app.use(helmet());
 
 app.use(requestLogger);
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.post('/signup', validateRegister, createUser);
 app.post('/signin', validateLogin, login);
