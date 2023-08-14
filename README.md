@@ -11,4 +11,4 @@ IP-адрес 51.250.73.72
 
 Frontend https://daniilcom.nomoreparties.co
 
-Backend https://...
+Backend https://api.daniilcom.nomoreparties.co
