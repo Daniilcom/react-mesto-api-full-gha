@@ -19,7 +19,9 @@ class Auth {
 
   register({ email, password }) {
     return this._request(`${this._baseUrl}/signup`, {
-      headers: this._headers,
+      headers: {
+        'Content-Type': 'application/json',
+      },
       method: 'POST',
       body: JSON.stringify({ email, password }),
     })
@@ -27,7 +29,9 @@ class Auth {
 
   authorize({ email, password }) {
     return this._request(`${this._baseUrl}/signin`, {
-      headers: this._headers,
+      headers: {
+        'Content-Type': 'application/json',
+      },
       method: 'POST',
       body: JSON.stringify({ email, password }),
     })
@@ -36,7 +40,10 @@ class Auth {
   getContent(token) {
     if (token !== undefined) {
       return this._request(`${this._baseUrl}/users/me`, {
-        headers: { ...this._headers, ['Authorization']: `Bearer ${token}` },
+        headers: {
+          'Content-Type': 'application/json',
+          authorization: `Bearer ${localStorage.getItem("token")}`
+        },
       })
     }
   }
