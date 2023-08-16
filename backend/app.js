@@ -11,7 +11,9 @@ const NotFoundError = require('./utils/errors/not-found-err');
 const { PORT, DB_URL } = process.env;
 
 const app = express();
-app.use(cors({ origin: ['https://daniilcom.nomoreparties.co'] }));
+app.use(cors({ origin: ['https://daniilcom.nomoreparties.co', 'https://api.daniilcom.nomoreparties.co', 'http://daniilcom.nomoreparties.co', 'http://api.daniilcom.nomoreparties.co'] }));
+// app.use(cors({ origin: ['https://daniilcom.nomoreparties.co', 'http://localhost:4000'] }));
+// app.use(cors());
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const auth = require('./middlewares/auth');
