@@ -4,7 +4,7 @@ class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl
   }
-
+  
   _handleResponse(res) {
     if (res.ok) {
       return res.json()
