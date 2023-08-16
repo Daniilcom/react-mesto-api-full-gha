@@ -1,9 +1,8 @@
-import requestDataAuth from './requestDataAuth'
+import requestData from './requestData'
 
 class Auth {
   constructor(options) {
     this._baseUrl = options.baseUrl
-    this._headers = options.headers
   }
 
   _handleResponse(res) {
@@ -49,6 +48,6 @@ class Auth {
   }
 }
 
-const auth = new Auth(requestDataAuth)
+const auth = new Auth(requestData)
 
 export default auth
