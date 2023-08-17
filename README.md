@@ -1,4 +1,4 @@
-[![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
+[![Статус тестов](../../actions/workflows/tests.yml/)](../../actions/workflows/tests.yml)
 
 # react-mesto-api-full
 Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.  
@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.73.72
+IP 51.250.73.72
 
 Frontend https://daniilcom.nomoreparties.co
 
