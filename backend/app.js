@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
 const mongoose = require('mongoose');
@@ -12,6 +13,12 @@ const { PORT, DB_URL } = require('./utils/constants');
 
 const app = express();
 app.use(cors);
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+});
+
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const auth = require('./middlewares/auth');
@@ -25,6 +32,7 @@ const { createUser, login } = require('./controllers/users');
 mongoose.connect(DB_URL);
 
 app.use(express.json());
+app.use(limiter);
 app.use(helmet());
 
 app.use(requestLogger);
